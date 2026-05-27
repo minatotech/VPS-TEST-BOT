@@ -6,18 +6,18 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 const __path = process.cwd();
 
-// 1. Prevent payload memory leak warnings for scale
+// 1. Prevent memory leak warnings during extensive multi-device operations
 require('events').EventEmitter.defaultMaxListeners = 500;
 
-// 2. Global Middleware (Must sit BEFORE router definitions)
+// 2. GLOBAL MIDDLEWARE FIRST: Parse payloads BEFORE the routes attempt to read them
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// 3. Mount Backend Pairing API Core
+// 3. ROUTERS: Mount the optimized backend pairing API logic
 const code = require('./pair'); 
 app.use('/code', code);
 
-// 4. Serve User Interface Static Routing via GET
+// 4. STATIC PAGES: Safer path rendering with absolute path resolution
 app.get('/pair', (req, res) => {
     try {
         res.sendFile(path.join(__path, 'pair.html'));
@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
     }
 });
 
-// 5. Initialize Server Listener
+// 5. BOOT SERVER
 app.listen(PORT, () => {
     console.log(`
 ⚡ MINATO TEST BOT SYSTEM INITIALIZED ⚡

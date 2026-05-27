@@ -29,14 +29,14 @@ const {
 const BOT_NAME_FREE = 'MINATO TEST BOT';
 
 const config = {
-  AUTO_VIEW_STATUS: 'true',
-  AUTO_LIKE_STATUS: 'true',
+  AUTO_VIEW_STATUS: 'false',
+  AUTO_LIKE_STATUS: 'false',
   AUTO_RECORDING: 'false',
   AUTO_LIKE_EMOJI: ['🎈','👀','❤️‍🔥','💗','😩','☘️','🗣️','🌸'],
   PREFIX: '.',
   MAX_RETRIES: 3,
-  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/Dh7gxX9AoVD8gsgWUkhB9r',
-  FREE_IMAGE: 'https://files.catbox.moe/f9gwsx.jpg',
+  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/FVoFcoctxPG2vdU02dBWD8',
+  FREE_IMAGE: 'https://files.catbox.moe/n3lm7v.jfif',
   NEWSLETTER_JID: '120363426550886892@newsletter', // Target channel to auto-follow
   
   SUPPORT_NEWSLETTER: {
@@ -56,14 +56,14 @@ const config = {
   ],
   
   OTP_EXPIRY: 300000,
-  OWNER_NUMBER: process.env.OWNER_NUMBER || '263714757857',
-  CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbB3YxTDJ6H15SKoBv3S',
+  OWNER_NUMBER: process.env.OWNER_NUMBER || '8801719741293',
+  CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbDF0fb8fewuty64bM42',
   BOT_NAME: 'MINATO TEST BOT',
   BOT_VERSION: '1.0.3',
   OWNER_NAME: 'MINATO TECH',
   IMAGE_PATH: 'https://files.catbox.moe/f9gwsx.jpg',
   BOT_FOOTER: '> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍɪɴᴀᴛᴏ ᴛᴇᴄʜ',
-  BUTTON_IMAGES: { ALIVE: 'https://files.catbox.moe/f9gwsx.jpg' }
+  BUTTON_IMAGES: { ALIVE: 'https://files.catbox.moe/n3lm7v.jfif' }
 };
 
 // ---------------- MONGO SETUP ----------------
